@@ -1,0 +1,11 @@
+<ul class="mt-10 w-96 gap-2 flex flex-col">
+    <li class="bg-white h-8 pl-5 flex justify-between items-center rounded-md overflow-hidden"
+      *ngFor="let todo of todos; let i = index">
+      <p class="font-bold">{{i}} 
+        <span class="font-medium">
+          {{todo.description}}
+        </span>
+      </p>
+      <button class="bg-red-500 px-2 h-full" (click)="deleteTodo(i)">Remove</button>
+    </li>
+  </ul>
